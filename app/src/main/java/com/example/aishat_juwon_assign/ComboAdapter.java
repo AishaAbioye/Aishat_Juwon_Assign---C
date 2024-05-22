@@ -11,9 +11,9 @@ import java.util.List;
 
 public class ComboAdapter extends RecyclerView.Adapter<ComboAdapter.ComboViewHolder> {
     private List<ComboItem> comboItems;
-    private ComboInteractionListener listener;
-    private Context context;
-    private int[][] imagesPerCombo;
+//    private ComboInteractionListener listener;
+//    private Context context;
+//    private int[][] imagesPerCombo;
 
     public ComboAdapter(Context context, List<ComboItem> comboItems, int[][] imagesPerCombo, ComboInteractionListener listener) {
         this.context = context;
