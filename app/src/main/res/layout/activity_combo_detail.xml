@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ComboDetailActivity">
+
+    <!-- Title at the Top -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Clicky Clicky Hero"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Combo Name displayed below the title -->
+    <TextView
+        android:id="@+id/tvComboName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Reinforce"
+        android:textSize="18sp"
+        android:gravity="start"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- LinearLayout for displaying the sequence of combo -->
+    <LinearLayout
+        android:id="@+id/llImagesContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="left"
+        app:layout_constraintTop_toBottomOf="@id/tvComboName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp">
+    </LinearLayout>
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="379dp"
+        android:layout_height="226dp"
+        android:columnCount="3"
+        android:padding="10dp"
+        android:rowCount="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llImagesContainer">
+
+
+        <ImageButton
+            android:id="@+id/imgbtnup"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/up" />
+
+        <ImageButton
+            android:id="@+id/imgbtnleft"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_marginStart="40dp"
+            android:scaleType="fitStart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llImagesContainer"
+            app:layout_constraintVertical_bias="0.677"
+            app:srcCompat="@drawable/left" />
+
+        <ImageButton
+            android:id="@+id/imgbtndown"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imgbtnleft"
+            app:layout_constraintTop_toBottomOf="@+id/llImagesContainer"
+            app:layout_constraintVertical_bias="0.677"
+            app:srcCompat="@drawable/down" />
+
+        <ImageButton
+            android:id="@+id/imgbtnright"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imgbtndown"
+            app:layout_constraintTop_toBottomOf="@+id/llImagesContainer"
+            app:layout_constraintVertical_bias="0.677"
+            app:srcCompat="@drawable/right" />
+        <!-- Updated Layout for Arrow Buttons using ImageButton -->
+
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Aishat_Juwon_Assign</string>
+    <string name="title_clicky_hero">Clicky Clicky Hero</string>
+    <string name="restart">RESTART</string>
+    <string name="select_a_combo">Select a Combo:</string>
+    <string name="correct_combos">Correct Combos: 0</string>
+        <string name="description_up">Button to move up</string>
+        <string name="description_down">Button to move down</string>
+        <string name="description_left">Button to move left</string>
+        <string name="description_right">Button to move right</string>
+
+</resources>
+
+
